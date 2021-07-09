@@ -101,16 +101,16 @@ int main(int argc, char** argv)
 	double tint = 0.0, es[] = { 2000,1,1,0,0,0 }, ee[] = { 2000,12,31,23,59,59 }, pos[3];
 	int i, j, n, ret;
 	char* infile[MAXFILE], * outfile = "", * p;
-	infile[0] = "F:\\CPPCode\\datas\\rnxdata\\obs\\HD-0602.21o";
-	infile[1] = "F:\\CPPCode\\datas\\rnxdata\\nav\\HD-0602.21n";
-	infile[2] = "F:\\CPPCode\\datas\\rnxdata\\obs\\ZJ-0602.21o";
-	outfile = "F:\\CPPCode\\datas\\HD-0602-GPS-2.pos";
+	infile[0] = "D:\\Academic_Software\\CppCode\\Datas\\01_Rinex_Data\\obs\\HD-0602.21o";
+	infile[1] = "D:\\Academic_Software\\CppCode\\Datas\\01_Rinex_Data\\nav\\HD-0602.21n";
+	infile[2] = "D:\\Academic_Software\\CppCode\\Datas\\01_Rinex_Data\\obs\\ZJ-0602.21o";
+	outfile = "D:\\Academic_Software\\CppCode\\Datas\\02_Pos_Output\\position.pos";
 
 	prcopt.mode = PMODE_STATIC;
 	prcopt.navsys = SYS_GPS;
 	prcopt.refpos = 3;
 	prcopt.glomodear = 1;
-	prcopt.soltype = 2;
+	prcopt.soltype = 0;
 	solopt.posf = SOLF_XYZ;
 	solopt.timef = 1;
 	sprintf(solopt.prog, "%s ver.%s %s", PROGNAME, VER_RTKLIB, PATCH_LEVEL);

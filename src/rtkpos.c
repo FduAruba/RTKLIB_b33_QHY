@@ -2326,7 +2326,7 @@ static int relpos(rtk_t* rtk, const obsd_t* obs, int nu, int nr, const nav_t* na
 	/* add 2 iterations for baseline-constraint moving-base  (else default niter=1) */
 	niter = opt->niter + (opt->mode == PMODE_MOVEB && opt->baseline[0] > 0.0 ? 2 : 0);   /* 设置迭代次数默认niter=1 */
 
-	FILE* fp = fopen("F:\\CPPCode\\datas\\GPS-AR-2.csv", "a+");  /* YJR创建写LAMBDA测试，输出模糊度a和协方差矩阵Q */
+	FILE* fp = fopen("D:\\Academic_Software\\CppCode\\Datas\\03_AR\\GPS-AR-2.csv", "a+");  /* YJR创建写LAMBDA测试，输出模糊度a和协方差矩阵Q */
 
 	for (i = 0; i < niter; i++) {
 		/* calculate zero diff residuals [range - measured pseudorange] for rover (phase and code)
